@@ -208,7 +208,7 @@
     }
 
     .x {
-      list-style-type: square;
+      list-style-type:square;
     }
 
     xmp {
@@ -406,6 +406,9 @@ border-radius: 5px;
 #box-parent{
   background-color: rgba(248, 245, 245, 0.952) ;
 }
+.fundwave-trigger-53170478332-dark:visited{
+color:white;
+}
   </style>
 </head>
 
@@ -420,20 +423,20 @@ border-radius: 5px;
   <div style="width:70%;margin:40px auto;text-align: left;line-height: 25px">
     <h2><b>Embed Button</b> </h2>
     <br>
-    <p>Use the Fundwave embed buttons on your website to give your investors and portfolio companies smooth access to Fundwave.
+    <p>Use the Fundwave embed buttons on your website to give your investors and portfolio companies direct access to Fundwave.
     </p>
     <br>
     <h2><b>How To Use</b> </h2>
     <br>
     <ul>
       <li class="x">
-        Select one of the buttons.
+        Select one of our ready-to-use buttons or customise one to suit your own website.
       </li>
       <li class="x">
         Copy the embed code on your website where you need the button.
       </li>
       <li class="x">
-        Make sure that the link to your profile is correct. 
+        You're ready to go! 
       </li>
       </ul>
     <br>
@@ -451,7 +454,7 @@ border-radius: 5px;
   <div id="formDiv">
 
       <div class="row">
-              <b>SOURCE URL: &nbsp;</b>
+              <b>Your Fundwave Instance : &nbsp;</b>
               <input type="text" id="instance">
               
       </div>    
@@ -759,7 +762,7 @@ let heightbtn=39;
 let logobtn=25;
 let fontbtn=17;
 let producbtn='Investor Login';
-let themebtn='https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png';
+let themebtn="url('https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png')";
 let path="submissions";
 
 
@@ -787,10 +790,10 @@ instance.placeholder=finalVal;
 
  let xmp = document.getElementsByTagName("xmp");
   console.log("--> "+xmp);
-  xmp[1].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-dark --p-dark" href="https://' + finalVal + '/portal"rel="noopener noreferrer" target="_blank">Portfolio Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
-  xmp[2].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light --p-light" href="https://' + finalVal+ '/portal"rel="noopener noreferrer" target="_blank">Portfolio Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
-  xmp[3].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" href="https://' + finalVal+ '/submissions"rel="noopener noreferrer" target="_blank">Investor Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
-  xmp[4].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-dark" href="https://' + finalVal+ '/submissions"rel="noopener noreferrer" target="_blank">Investor Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[1].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-dark --p-dark" href="https://' + finalVal + '/submissions" rel="noopener noreferrer" target="_blank">Portfolio Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[2].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light --p-light" href="https://' + finalVal+ '/submissions" rel="noopener noreferrer" target="_blank">Portfolio Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[3].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" href="https://' + finalVal+ '/portal" rel="noopener noreferrer" target="_blank">Investor Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[4].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-dark" href="https://' + finalVal+ '/portal" rel="noopener noreferrer" target="_blank">Investor Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
 
   
   
@@ -811,7 +814,7 @@ else{
 
 function done(){
   console.log("donee");
-  xmp[0].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" style="width:'+widthbtn+'px;background-size:'+logobtn+'px;height:'+heightbtn+'px;font-size:'+fontbtn+'px;background-color:'+bgcolorbtn+';color:'+colorbtn+'; background-image: url(\''+themebtn+'\');" href="https://' + finalVal+ '/'+path+'" rel="noopener noreferrer" target="_blank">'+producbtn+'</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[0].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" style="width:'+widthbtn+'px;background-size:'+logobtn+'px;height:'+heightbtn+'px;font-size:'+fontbtn+'px;background-color:'+bgcolorbtn+';color:'+colorbtn+'; background-image: '+themebtn+'" href="https://' + finalVal+ '/'+path+'" rel="noopener noreferrer" target="_blank">'+producbtn+'</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
 
 
 }
@@ -904,21 +907,7 @@ s=document.getElementById("btnSize").value;
   btn.style.width=s;
 
 
-function _theme(){
-  let ci=document.getElementById("theme").value;
-  
-  console.log("->>"+ ci);
-  if(ci=="dark"){
-    console.log("dark");
-    btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/02/logo-white-ribbon-no-text.png";
-   
-  }
-  else{
-    console.log("light");
-    btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png";
-  }
-  themebtn=btn.style.backgroundImage;
-}
+
 
 function colorchange(){
   let ci=document.getElementById("colorid").value;
@@ -968,13 +957,15 @@ function prod(xx){
   else{
     if(xx=="Light"){
    
-    btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/03/logo-white-ribbon.png";
+    btn.style.backgroundImage="url('https://www.getfundwave.com/wp-content/uploads/2019/03/logo-white-ribbon.png')";
+    themebtn="url('https://www.getfundwave.com/wp-content/uploads/2019/03/logo-white-ribbon.png')";
   }
   else{
    
-    btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png";
+    btn.style.backgroundImage="url('https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png')";
+    themebtn="url('https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png')";
   }
-  themebtn=btn.style.backgroundImage;
+  
   }
 
 } 

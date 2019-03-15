@@ -904,9 +904,10 @@ s=document.getElementById("btnSize").value;
   btn.style.width=s;
 
 
-function _theme(xx){
+function _theme(){
   let ci=document.getElementById("theme").value;
   
+  console.log("->>"+ ci);
   if(ci=="dark"){
     console.log("dark");
     btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/02/logo-white-ribbon-no-text.png";
@@ -967,7 +968,7 @@ function prod(xx){
   else{
     if(xx=="Light"){
    
-    btn.style.backgroundImage="url('./WHITE.png')";
+    btn.style.backgroundImage="url.('https://www.getfundwave.com/wp-content/uploads/2019/02/logo-white-ribbon-no-text.png')";
   }
   else{
    

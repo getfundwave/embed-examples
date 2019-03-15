@@ -532,9 +532,9 @@ border-radius: 5px;
                       <div class="custom-select" style="width:80%;display: inline-block;">
                        
                           <select id="theme" onchange="_theme()" >
-                              <option value="a" selected>Light</option>
-                              <option value="b" >Light</option>
-                              <option value="c">Dark</option>
+                              <option value="a" selected>Dark</option>
+                              <option value="b" >Dark</option>
+                              <option value="c">Light</option>
                           </select>
                      </div>
                                 
@@ -760,11 +760,14 @@ let logobtn=25;
 let fontbtn=17;
 let producbtn='Investor Login';
 let themebtn='https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png';
+let path="submissions";
 
-let index=document.URL.indexOf('?');
+
+  let index=document.URL.indexOf('?');
 let pair=document.URL.substring(index+1,document.URL.length).split('&');
-let finalVal='';
-for(let index=0;index<pair.length;index++){
+
+  let finalVal='';
+  for(let index=0;index<pair.length;index++){
   let value=pair[0].split('=');
   if(value[0]=="instance"){
     finalVal=value[1];
@@ -774,7 +777,13 @@ for(let index=0;index<pair.length;index++){
 com=finalVal.indexOf('.com');
 finalVal=finalVal.substring(0,com+4);
 let instance=document.getElementById("instance");
+if(finalVal==''){
+  finalVal="app.getfundwave.com"
+}
 instance.placeholder=finalVal;
+
+
+
 
  let xmp = document.getElementsByTagName("xmp");
   console.log("--> "+xmp);
@@ -802,7 +811,7 @@ else{
 
 function done(){
   console.log("donee");
-  xmp[0].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" style="width:'+widthbtn+'px;background-size:'+logobtn+'px;height:'+heightbtn+'px;font-size:'+fontbtn+'px;background-color:'+bgcolorbtn+';color:'+colorbtn+'; background-image: url(\''+themebtn+'\');" href="https://' + finalVal+ '.getfundwave.com/portal"rel="noopener noreferrer" target="_blank">'+producbtn+'</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "http://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[0].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" style="width:'+widthbtn+'px;background-size:'+logobtn+'px;height:'+heightbtn+'px;font-size:'+fontbtn+'px;background-color:'+bgcolorbtn+';color:'+colorbtn+'; background-image: url(\''+themebtn+'\');" href="https://' + finalVal+ '/'+path+'" rel="noopener noreferrer" target="_blank">'+producbtn+'</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "http://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
 
 
 }
@@ -900,12 +909,12 @@ function _theme(xx){
   
   if(ci=="dark"){
     console.log("dark");
-    btn.style.backgroundImage="url('https://www.getfundwave.com/wp-content/uploads/2019/02/logo-white-ribbon-no-text.png')";
+    btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/02/logo-white-ribbon-no-text.png";
    
   }
   else{
     console.log("light");
-    btn.style.backgroundImage="url('https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png')";
+    btn.style.backgroundImage="https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png";
   }
   themebtn=btn.style.backgroundImage;
 }
@@ -948,14 +957,20 @@ function prod(xx){
   if(xx=="Investor Login" || xx=="Portfolio Login"){
     btn.innerText=xx;
     producbtn=xx;
+    if(xx=="Investor Login"){
+      path="submissions";
+    }
+    else{
+      path="portal";
+    }
   }
   else{
-    if(xx=="Dark"){
-    console.log("Dark");
-    btn.style.backgroundImage="url('https://www.getfundwave.com/wp-content/uploads/2019/02/logo-white-ribbon-no-text.png')";
+    if(xx=="Light"){
+   
+    btn.style.backgroundImage="url('./WHITE.png')";
   }
   else{
-    console.log("light");
+   
     btn.style.backgroundImage="url('https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png')";
   }
   themebtn=btn.style.backgroundImage;

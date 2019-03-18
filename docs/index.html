@@ -763,7 +763,7 @@ let logobtn=25;
 let fontbtn=17;
 let producbtn='Investor Login';
 let themebtn="url('https://www.getfundwave.com/wp-content/uploads/2019/01/logo-blue-ribbon-wave.png')";
-let path="submissions";
+let path="portal";
 
 
   let index=document.URL.indexOf('?');
@@ -964,10 +964,10 @@ function prod(xx){
     btn.innerText=xx;
     producbtn=xx;
     if(xx=="Investor Login"){
-      path="submissions";
+      path="portal";
     }
     else{
-      path="portal";
+      path="submissions";
     }
   }
   else{

@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 <head>
-  <title>EMBED-BUTTON</title>
+  <title>FUNDWAVE-EMBED-BUTTON</title>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -406,8 +406,8 @@ border-radius: 5px;
 #box-parent{
   background-color: rgba(248, 245, 245, 0.952) ;
 }
-.fundwave-trigger-53170478332-dark:visited{
-color:white;
+.fundwave-trigger-53170478332-dark{
+color:white !important;
 }
   </style>
 </head>
@@ -455,7 +455,7 @@ color:white;
 
       <div class="row">
               <b>Your Fundwave Instance : &nbsp;</b>
-              <input type="text" id="instance">
+              <input type="text" id="instance" onchange="instance_value()" >
               
       </div>    
       <div class="row">
@@ -784,6 +784,22 @@ if(finalVal==''){
   finalVal="app.getfundwave.com"
 }
 instance.placeholder=finalVal;
+
+
+  function instance_value(){
+
+    finalVal=document.getElementById("instance").value;
+    console.log("here--  "+finalVal );
+    let xmp = document.getElementsByTagName("xmp");
+  console.log("--> "+xmp);
+  xmp[1].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-dark --p-dark" href="https://' + finalVal + '/submissions" rel="noopener noreferrer" target="_blank">Portfolio Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[2].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light --p-light" href="https://' + finalVal+ '/submissions" rel="noopener noreferrer" target="_blank">Portfolio Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[3].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-light" href="https://' + finalVal+ '/portal" rel="noopener noreferrer" target="_blank">Investor Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+  xmp[4].innerHTML = '<a type="button" class="fundwave-trigger-53170478332 fundwave-trigger-53170478332-dark" href="https://' + finalVal+ '/portal" rel="noopener noreferrer" target="_blank">Investor Login</a><script>!function (a) { var b = "fundwave-embed"; var c = "link"; var h = "head"; var d = a.createElement(c); var f = a.createElement(c); var e = document.getElementsByTagName(h)[0]; f.rel = "stylesheet"; f.href = "https://fonts.googleapis.com/css?family=Josefin+Sans"; e.parentNode.insertBefore(f, e); d.rel = "stylesheet"; d.type = "text/css"; d.href = "https://d3pslr75hbegnc.cloudfront.net/embed/fundwaveembed-v1.css"; e.parentNode.insertBefore(d, e); }(document);</sc' + 'ript>';
+
+  }
+  
+
 
 
 
